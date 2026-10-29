@@ -4,18 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/jpeg" href="../assets/favicon.jpg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/main.css" />
-    <title>Level 01 | Avoid Cybercrime</title>
+    <link rel="stylesheet" href="../css/level-01.css" />
+    <title>New Tab</title>
   </head>
   <body>
-    <main class="level-page">
-      <a class="back-link" href="../index.html">← QUAY LẠI</a>
-    </main>
+    <section class="browser" aria-label="Cửa sổ trình duyệt Chrome">
+      <header class="browser-chrome">
+        <div class="tab-row">
+          <div class="tab active-tab"><span class="chrome-mark" aria-hidden="true"><span></span></span><span>New Tab</span><span class="tab-close" aria-hidden="true">×</span></div>
+          <button class="new-tab" type="button" aria-label="Tab mới">+</button>
+          <div class="window-controls" aria-hidden="true"><span>−</span><span>□</span><span>×</span></div>
+        </div>
+        <div class="toolbar">
+          <div class="nav-controls" aria-hidden="true"><span class="disabled">‹</span><span class="disabled">›</span><span>↻</span></div>
+          <div class="omnibox"><span class="site-icon" aria-hidden="true">⌕</span><span>Search Google or type a URL</span><span class="omnibox-actions" aria-hidden="true">☆ ⋮</span></div>
+          <span class="profile" aria-label="Hồ sơ">M</span><span class="menu" aria-hidden="true">⋮</span>
+        </div>
+      </header>
+      <main class="new-tab-page">
+        <div class="page-links"><span>Gmail</span><span>Images</span><span class="apps-grid" aria-label="Ứng dụng Google">⠿</span><span class="google-account">M</span></div>
+        <div class="google-content">
+          <div class="google-logo" aria-label="Google"><span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span class="blue">g</span><span class="green">l</span><span class="red">e</span></div>
+          <div class="google-search" aria-label="Tìm kiếm Google"><span class="search-icon" aria-hidden="true"></span><span class="search-placeholder">Search Google or type a URL</span><span class="voice" aria-hidden="true">♬</span><span class="lens" aria-hidden="true">◉</span></div>
+          <div class="shortcuts" aria-label="Lối tắt">
+            <a class="shortcut" href="https://www.google.com" aria-label="Google"><span class="shortcut-icon google-g">G</span><span>Google</span></a>
+            <a class="shortcut" href="https://www.youtube.com" aria-label="YouTube"><span class="shortcut-icon youtube">▶</span><span>YouTube</span></a>
+          </div>
+        </div>
+        <button class="customize" type="button"><span aria-hidden="true">✎</span> Customize Chrome</button>
+      </main>
+    </section>
   </body>
 </html>
-
-
-

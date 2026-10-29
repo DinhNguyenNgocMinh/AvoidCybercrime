@@ -1,0 +1,49 @@
+:root {
+  --neon: #37f28a;
+  --neon-bright: #91ffc2;
+  --violet: #8338ec;
+  --ink: #050a0d;
+  --panel: #07100d;
+  --line: rgba(55, 242, 138, 0.35);
+  --warning: #ffba68;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--neon-bright);
+  font-family: "Share Tech Mono", monospace;
+  background:
+    linear-gradient(rgba(55, 242, 138, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(55, 242, 138, 0.045) 1px, transparent 1px),
+    radial-gradient(circle at 50% 0%, #153628 0%, var(--ink) 57%);
+  background-size: 32px 32px, 32px 32px, auto;
+}
+
+.level-canvas {
+  min-height: 100vh;
+  padding: 2rem;
+  border: 2px solid var(--violet);
+  box-shadow: inset 0 0 48px rgba(131, 56, 236, 0.18);
+}
+
+/* Typography and palette available to the level implementation. */
+h1,
+h2,
+h3 {
+  color: var(--neon);
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-shadow: 0 0 12px rgba(55, 242, 138, 0.65);
+}
+
+@media (max-width: 680px) {
+  .level-canvas {
+    padding: 1rem;
+  }
+}
