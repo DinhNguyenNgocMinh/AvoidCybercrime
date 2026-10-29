@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Luyện tập nhận diện các hình thức tội phạm mạng thường gặp." />
+    <link rel="icon" type="image/jpeg" href="assets/favicon.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Avoid Cybercrime</title>
+  </head>
+  <body>
+    <div class="auth-bar" aria-label="Tài khoản">
+      <span class="account-name" id="account-name" hidden></span>
+      <button class="auth-button" id="login-button" type="button">LOGIN</button>
+      <button class="auth-button" id="signup-button" type="button">SIGN UP</button>
+      <button class="logout-button" id="logout-button" type="button" hidden>LOG OUT</button>
+    </div>
+    <div class="page-shell">
+      <main>
+        <h1>AVOID CYBERCRIME</h1>
+        <nav class="levels" aria-label="Chọn cấp độ luyện tập">
+          <a class="level-button" href="levels/level-01.html">LEVEL 01</a>
+          <a class="level-button locked" href="levels/level-02.html" data-level="2"><span class="lock">🔒</span>LEVEL 02</a>
+          <a class="level-button locked" href="levels/level-03.html" data-level="3"><span class="lock">🔒</span>LEVEL 03</a>
+          <a class="level-button locked" href="levels/level-04.html" data-level="4"><span class="lock">🔒</span>LEVEL 04</a>
+          <a class="level-button locked" href="levels/level-05.html" data-level="5"><span class="lock">🔒</span>LEVEL 05</a>
+          <a class="level-button locked" href="levels/level-06.html" data-level="6"><span class="lock">🔒</span>LEVEL 06</a>
+          <a class="level-button locked" href="levels/level-07.html" data-level="7"><span class="lock">🔒</span>LEVEL 07</a>
+          <a class="level-button locked" href="levels/level-08.html" data-level="8"><span class="lock">🔒</span>LEVEL 08</a>
+          <a class="level-button locked" href="levels/level-09.html" data-level="9"><span class="lock">🔒</span>LEVEL 09</a>
+          <a class="level-button locked" href="levels/level-10.html" data-level="10"><span class="lock">🔒</span>LEVEL 10</a>
+          <a class="level-button locked" href="levels/level-11.html" data-level="11"><span class="lock">🔒</span>LEVEL 11</a>
+          <a class="level-button locked" href="levels/level-12.html" data-level="12"><span class="lock">🔒</span>LEVEL 12</a>
+          <a class="level-button locked" href="levels/level-13.html" data-level="13"><span class="lock">🔒</span>LEVEL 13</a>
+          <a class="level-button locked" href="levels/level-14.html" data-level="14"><span class="lock">🔒</span>LEVEL 14</a>
+          <a class="level-button locked" href="levels/level-15.html" data-level="15"><span class="lock">🔒</span>LEVEL 15</a>
+          <a class="level-button locked" href="levels/level-16.html" data-level="16"><span class="lock">🔒</span>LEVEL 16</a>
+        </nav>
+      </main>
+    </div>
+    <dialog id="auth-dialog" aria-labelledby="auth-title">
+      <form class="dialog-content" id="auth-form" novalidate>
+        <h2 class="dialog-title" id="auth-title">LOGIN</h2>
+        <label class="form-field">USERNAME <input id="username" name="username" autocomplete="username" minlength="4" required /></label>
+        <label class="form-field">PASSWORD <input id="password" name="password" type="password" autocomplete="current-password" minlength="4" required /></label>
+        <p class="form-hint" id="auth-hint">Tối thiểu 4 ký tự cho username và password.</p>
+        <p class="form-message" id="auth-message" role="status"></p>
+        <div class="form-actions"><button class="form-cancel" id="cancel-auth" type="button">HỦY</button><button class="form-submit" id="submit-auth" type="submit">LOGIN</button></div>
+      </form>
+    </dialog>
+    <script type="module" src="js/auth.js"></script>
+  </body>
+</html>
+
+
+

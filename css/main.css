@@ -1,0 +1,173 @@
+:root {
+  --neon: #37f28a;
+  --bright: #91ffc2;
+  --ink: #050a0d;
+  --line: rgba(55, 242, 138, 0.35);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--bright);
+  font-family: "Share Tech Mono", monospace;
+  background:
+    linear-gradient(rgba(55, 242, 138, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(55, 242, 138, 0.045) 1px, transparent 1px),
+    radial-gradient(circle at 50% 0%, #153628 0%, var(--ink) 57%);
+  background-size: 32px 32px, 32px 32px, auto;
+}
+
+.page-shell {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 3rem 1.5rem;
+  border: 2px solid #8338ec;
+  box-shadow: inset 0 0 48px rgba(131, 56, 236, 0.18);
+}
+
+main { width: min(100%, 940px); text-align: center; }
+
+.auth-bar {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.auth-button,
+.logout-button {
+  border: 1px solid var(--line);
+  border-radius: 0.4rem;
+  padding: 0.55rem 0.8rem;
+  color: var(--neon);
+  background: #06110b;
+  font: 700 0.8rem "Share Tech Mono", monospace;
+  cursor: pointer;
+  letter-spacing: 0.06em;
+}
+
+.auth-button:hover,
+.auth-button:focus-visible,
+.logout-button:hover,
+.logout-button:focus-visible {
+  outline: none;
+  background: #10301e;
+  box-shadow: 0 0 12px rgba(55, 242, 138, 0.35);
+}
+
+.account-name {
+  max-width: 10rem;
+  overflow: hidden;
+  color: var(--bright);
+  font-size: 0.75rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+h1 {
+  margin: 0 0 3.25rem;
+  color: var(--neon);
+  font-family: "VT323", monospace;
+  font-size: clamp(3.5rem, 9vw, 6.5rem);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  line-height: 0.8;
+  text-shadow: 0 0 12px rgba(55, 242, 138, 0.65);
+}
+
+.levels {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2rem 2.25rem;
+}
+
+.level-button {
+  display: grid;
+  place-items: center;
+  min-height: 3.4rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 0.6rem;
+  color: #00ff45;
+  background: #020506;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 8px 18px rgba(0, 0, 0, 0.48);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.level-button:hover,
+.level-button:focus-visible {
+  outline: none;
+  transform: translateY(-3px);
+  background: #0a2918;
+  box-shadow: 0 0 18px rgba(0, 255, 69, 0.45), 0 10px 22px rgba(0, 0, 0, 0.55);
+}
+
+.level-button.locked {
+  color: #737b80;
+  border-color: #4d5559;
+  background: #202528;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.level-button.locked:hover,
+.level-button.locked:focus-visible {
+  transform: none;
+  background: #202528;
+  box-shadow: none;
+}
+
+.lock { margin-right: 0.4rem; color: #a5abb0; font-size: 0.9em; }
+
+dialog {
+  width: min(92vw, 390px);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  padding: 0;
+  color: var(--bright);
+  background: #07100d;
+  box-shadow: 0 0 40px rgba(55, 242, 138, 0.18);
+}
+
+dialog::backdrop { background: rgba(0, 0, 0, 0.76); backdrop-filter: blur(3px); }
+.dialog-content { padding: 1.75rem; }
+.dialog-title { margin: 0 0 1.25rem; color: var(--neon); font-family: "VT323", monospace; font-size: 2.35rem; letter-spacing: 0.06em; }
+.form-field { display: grid; gap: 0.45rem; margin-bottom: 1rem; color: var(--bright); font-size: 0.82rem; text-align: left; }
+
+input {
+  width: 100%;
+  border: 1px solid #456350;
+  border-radius: 0.35rem;
+  padding: 0.75rem;
+  color: #e1ffeb;
+  background: #020806;
+  font: 1rem "Share Tech Mono", monospace;
+}
+
+input:focus { outline: 2px solid var(--neon); outline-offset: 2px; }
+.form-actions { display: flex; justify-content: flex-end; gap: 0.65rem; margin-top: 1.25rem; }
+.form-submit, .form-cancel { border: 1px solid var(--line); border-radius: 0.35rem; padding: 0.65rem 0.85rem; font: 700 0.8rem "Share Tech Mono", monospace; cursor: pointer; }
+.form-submit { color: #05110a; background: var(--neon); }
+.form-cancel { color: var(--bright); background: transparent; }
+.form-message { min-height: 1.25rem; margin: 0.5rem 0 0; color: #ffba68; font-size: 0.75rem; line-height: 1.45; }
+.form-hint { margin: -0.25rem 0 1rem; color: #a1b5a8; font-size: 0.7rem; line-height: 1.45; }
+
+.level-page { display: grid; place-items: center; min-height: 100vh; padding: 1.5rem; }
+.back-link { color: #00ff45; font: 700 1rem "Share Tech Mono", monospace; letter-spacing: 0.12em; text-decoration: none; }
+.back-link:hover, .back-link:focus-visible { outline: none; color: var(--bright); text-shadow: 0 0 12px rgba(55, 242, 138, 0.65); }
+
+@media (max-width: 680px) {
+  .page-shell { padding-top: 6rem; }
+  .auth-bar { top: 0.85rem; right: 0.85rem; }
+  .levels { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+  h1 { margin-bottom: 2.5rem; }
+}
